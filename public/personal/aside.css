@@ -1,0 +1,38 @@
+.about {
+    flex: 0 0 36.5%; /* приблизна стара пропорція */
+    padding-left: var(--padding-content);
+    background-color: var(--color-light-grey);
+    padding-top: var(--padding-content);
+    border-right: 2px solid var(--color-dark-grey);
+}
+
+.about > h2 {
+    margin-bottom: 16px;
+}
+
+.about-item {
+    margin-bottom: 26px;
+}
+
+.about-item h3 {
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    font-weight: bold;
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+.about-item p {
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    color: var(--color-dark-grey);
+    margin-right: 30px;
+}
+
+.about-item:last-child {
+    margin-bottom: 0;
+}
+
+.about {
+    padding-bottom: 30px;
+}

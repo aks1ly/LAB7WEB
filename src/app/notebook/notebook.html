@@ -1,0 +1,88 @@
+<app-header></app-header>
+<main class="container">
+	<div class="section-heading">
+		<span class="eyebrow">ВАРІАНТ №3 \ ANGULAR</span>
+		<h2>Розрахунок вартості <span>зошитів.</span></h2>
+		<p>Введіть характеристики звичайного та загального зошита для обчислення їхньої вартості.</p>
+	</div>
+
+	<div class="cards">
+		<section class="notebook-card">
+			<div class="card-number">1 \ БАЗОВИЙ КЛАС</div>
+			<h3>Звичайний <span>зошит</span></h3>
+
+			<div class="field">
+				<label for="name">Назва зошита</label>
+				<input id="name" type="text" [(ngModel)]="name" placeholder="Наприклад, Шкільний">
+			</div>
+
+			<div class="field">
+				<label for="k">Кількість аркушів</label>
+				<input id="k" type="number" [(ngModel)]="k" min="1" step="1" placeholder="Наприклад, 48">
+			</div>
+
+			<div class="formula">Вартість = 15 × k</div>
+		</section>
+
+		<section class="notebook-card general">
+			<div class="card-number">2 \ КЛАС-НАЩАДОК</div>
+			<h3>Загальний <span>зошит</span></h3>
+
+			<div class="field">
+				<label for="generalName">Назва зошита</label>
+				<input id="generalName" type="text" [(ngModel)]="generalName" placeholder="Наприклад, Універсальний">
+			</div>
+
+			<div class="field">
+				<label for="generalK">Кількість аркушів</label>
+				<input id="generalK" type="number" [(ngModel)]="generalK" min="1" step="1" placeholder="Наприклад, 96">
+			</div>
+
+			<div class="field">
+				<label for="cover">Матеріал обкладинки</label>
+				<select id="cover" [(ngModel)]="coverMaterial">
+					<option value="">Оберіть матеріал</option>
+					<option value="Картон">Картон</option>
+					<option value="Пластик">Пластик</option>
+					<option value="Папір">Папір</option>
+					<option value="Шкірозамінник">Шкірозамінник</option>
+				</select>
+			</div>
+
+			<div class="formula">Вартість = 15 × k + 50</div>
+		</section>
+	</div>
+
+	<div class="actions">
+		<button type="button" (click)="calculate()">РОЗРАХУВАТИ ВАРТІСТЬ</button>
+	</div>
+
+	@if (errorMessage) {
+		<div class="error">{{ errorMessage }}</div>
+	}
+
+	@if (showResults) {
+		<section class="results">
+			<div class="results-heading">
+				<span class="eyebrow">РЕЗУЛЬТАТИ ОБЧИСЛЕНЬ</span>
+				<h2>Готово!</h2>
+			</div>
+
+			<div class="result-grid">
+				<div class="result-card">
+					<span>ЗВИЧАЙНИЙ ЗОШИТ</span>
+					<h3>{{ name }}</h3>
+					<strong>{{ regularCost }} грн</strong>
+					<p>{{ getSheetText(k) }}</p>
+				</div>
+
+				<div class="result-card highlighted">
+					<span>ЗАГАЛЬНИЙ ЗОШИТ</span>
+					<h3>{{ generalName }}</h3>
+					<strong>{{ generalCost }} грн</strong>
+					<p>{{ getSheetText(generalK) }} · {{ coverMaterial }}</p>
+				</div>
+			</div>
+		</section>
+	}
+</main>

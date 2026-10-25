@@ -1,0 +1,67 @@
+.cat-gallery {
+    margin-top: var(--padding-content);
+    padding-top: var(--padding-content);
+    padding-right: var(--padding-content);
+    position: relative;
+}
+
+/* Розділювальна лінія від краю до краю aside */
+.cat-gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--padding-content));
+    right: 0;
+    height: 2px;
+    background-color: var(--color-dark-grey);
+}
+
+.cat-gallery h2 {
+    margin-bottom: 16px;
+}
+
+/* Адаптивна сітка */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.gallery-card {
+    background-color: var(--color-dark-grey);
+}
+
+/* Область, усередині якої збільшується фото */
+.gallery-image {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+/* Гнучке зображення */
+.gallery-card figcaption {
+    height: 38px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* Підпис */
+.gallery-card figcaption {
+    padding: 10px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* Ефект при наведенні */
+.gallery-card:hover img {
+    transform: scale(1.05);
+}

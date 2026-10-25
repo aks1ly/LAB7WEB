@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Unbounded:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-red: #A91F1F;
+    --color-dark-grey: #4A4848;
+    --color-light-grey: #AFAFAF;
+    --color-light-light-grey: #CACACA;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-for-table: #DADADA;
+
+    --font-family-heading: "Unbounded", sans-serif;
+    --font-family: "Comfortaa", sans-serif;
+
+    --font-size-h1: 30px;
+    --font-size-h2: 30px;
+    --font-size-menu: 15px;
+    --font-size-text: 15px;
+    --font-size-small: 12px; /*розклад, дисципліни*/
+    --font-size-footer: 20px;
+
+    --width: 1440px;
+    --height-header: 120px;
+    --height-footer: 100px;
+    --padding-content: 30px;
+}

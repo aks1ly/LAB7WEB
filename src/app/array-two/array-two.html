@@ -1,0 +1,85 @@
+<main class="container">
+	<div class="section-heading">
+		<p class="eyebrow">ВАРІАНТ №3 \ ANGULAR \ ЛР7</p>
+		<h1>Двовимірний <span>масив.</span></h1>
+		<p>Заповніть матрицю A[1..5, 1..3] дійсними числами. Програма визначить індекси всіх від'ємних елементів.</p>
+	</div>
+
+	<div class="cards">
+		<section class="array-card">
+			<p class="card-number">1 \ ВХІДНІ ДАНІ</p>
+			<h2>Матриця <span>5 × 3</span></h2>
+
+			<div class="matrix-scroll">
+				<div class="matrix">
+					<div class="matrix-label"></div>
+					@for (column of [1, 2, 3]; track column) {
+						<div class="matrix-label">j = {{ column }}</div>
+					}
+
+					@for (row of matrix; track $index; let i = $index) {
+						<div class="matrix-label">i = {{ i + 1 }}</div>
+
+						@for (cell of row; track $index; let j = $index) {
+							<input
+								type="text"
+								inputmode="decimal"
+								[ngModel]="matrix[i][j]"
+								(ngModelChange)="onCellChange(i, j, $event)"
+								[attr.aria-label]="'A[' + (i + 1) + ', ' + (j + 1) + ']'"
+								placeholder="0"
+								[class.invalid]="matrix[i][j].trim() !== '' && !isValidNumber(matrix[i][j])"
+								[class.negative]="isNegative(i, j)"
+							/>
+						}
+					}
+				</div>
+			</div>
+
+			<p class="hint">Дозволено цілі та дробові числа. Для дробової частини можна використовувати крапку або кому.</p>
+		</section>
+
+		<section class="array-card result-card">
+			<p class="card-number">2 \ РЕЗУЛЬТАТ</p>
+			<h2>Від'ємні <span>елементи</span></h2>
+
+			@if (isCalculated) {
+				@if (negativeElements.length > 0) {
+					<p class="result-count">Знайдено: {{ negativeElements.length }}</p>
+
+					<div class="result-list">
+						@for (element of negativeElements; track $index) {
+							<div class="result-item">
+								<span class="element-index">A[{{ element.row }}, {{ element.column }}]</span>
+								<span class="element-value">{{ element.value }}</span>
+							</div>
+						}
+					</div>
+				} @else {
+					<div class="empty-state">
+						<span class="empty-symbol">✓</span>
+						<p>Від'ємних елементів не знайдено.</p>
+					</div>
+				}
+			} @else {
+				<div class="empty-state">
+					<span class="empty-symbol">[ ]</span>
+					<p>Індекси від'ємних елементів з'являться після обробки матриці.</p>
+				</div>
+			}
+		</section>
+	</div>
+
+	@if (error) {
+		<p class="error-message">{{ error }}</p>
+	}
+
+	<div class="actions">
+		<button class="calculate-btn" type="button" (click)="calculate()">
+			ЗНАЙТИ ВІД'ЄМНІ
+		</button>
+		<button class="clear-btn" type="button" (click)="clear()">
+			ОЧИСТИТИ
+		</button>
+	</div>
+</main>

@@ -1,0 +1,90 @@
+#timeline {
+    margin-top: var(--padding-content);
+    margin-right: var(--padding-content);
+}
+
+#timeline h2 {
+    margin-bottom: 24px;
+}
+
+.timeline {
+    position: relative;
+}
+
+/* Центральна вертикальна лінія */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--color-red);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+
+/* Парні елементи розміщуються справа */
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+/* Червона точка на лінії */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-red);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline-item:nth-child(even)::before {
+    right: auto;
+    left: -6px;
+}
+
+.timeline-content {
+    padding: 15px;
+    background-color: var(--color-for-table);
+}
+
+.timeline-year {
+    display: block;
+    margin-bottom: 8px;
+
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-small);
+    color: var(--color-red);
+}
+
+.timeline-content h3 {
+    margin-bottom: 8px;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+.timeline-content p {
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    line-height: 18px;
+    color: var(--color-dark-grey);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}

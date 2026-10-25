@@ -1,0 +1,60 @@
+#disciplines {
+    margin-top: var(--padding-content);
+}
+
+#disciplines h2 {
+    margin-bottom: 21px;
+}
+
+.disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 13%; /* не фіксована відстань між дисциплінами горизонтально */
+    row-gap: 39px;
+    margin-right: var(--padding-content);
+}
+
+.discipline-title {
+    min-height: 40px; /* щоб на меншому екрані був текст в один рядок */
+    padding: 8px 15px; /* щоб при переносі тексту був нормальний відступ ще й зверху/знизу. */
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 2; /*вище ніж червоний блок*/
+
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+}
+
+.discipline-card {
+    overflow: hidden;
+}
+
+.discipline-description {
+    position: relative;
+    z-index: 1;
+
+    height: 124px;
+    padding: 15px;
+
+    background-color: var(--color-red);
+    color: var(--color-white);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    line-height: 17px;
+
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+}
+
+@media (hover: hover) {
+    .discipline-card:hover .discipline-description {
+        transform: translateY(0);
+    }
+}

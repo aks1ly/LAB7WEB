@@ -1,0 +1,22 @@
+#achievements {
+    margin-top: 22px;
+}
+
+#achievements h2 {
+    margin-bottom: 13px;
+}
+
+.achievements-list {
+    padding-left: var(--padding-content);
+    padding-right: var(--padding-content);
+    padding-bottom: var(--padding-content);
+}
+
+.achievements-list li {
+    list-style-type: disc;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    line-height: 20px;
+}
+

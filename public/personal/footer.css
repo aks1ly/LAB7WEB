@@ -1,0 +1,14 @@
+/* не фіксоване значення висоти футер, а просто відступиа м */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    border-top: 2px solid var(--color-dark-grey);
+}
+
+.footer p {
+    font-family: var(--font-family);
+    font-size: var(--font-size-footer);
+    color: var(--color-black);
+}

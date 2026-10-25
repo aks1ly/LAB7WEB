@@ -1,0 +1,66 @@
+<main class="container">
+	<div class="section-heading">
+		<p class="eyebrow">ВАРІАНТ №3 \ ANGULAR \ ЛР7</p>
+		<h1>Одновимірний <span>масив.</span></h1>
+		<p>Введіть п'ять прізвищ. Програма виведе їх стовпчиком, починаючи з останнього.</p>
+	</div>
+
+	<div class="cards">
+		<section class="array-card">
+			<p class="card-number">1 \ ВХІДНІ ДАНІ</p>
+			<h2>Масив <span>прізвищ</span></h2>
+
+			<div class="fields">
+				@for (surname of surnames; track $index; let i = $index) {
+					<div class="field">
+						<label [for]="'surname-' + i">Прізвище {{ i + 1 }}</label>
+						<input
+							[id]="'surname-' + i"
+							type="text"
+							[ngModel]="surnames[i]"
+							(ngModelChange)="onSurnameChange(i, $event)"
+							[maxlength]="50"
+							placeholder="Введіть прізвище"
+							[class.invalid]="surnames[i].trim() !== '' && !isValidSurname(surnames[i])"
+						/>
+					</div>
+				}
+			</div>
+			<p class="hint">Дозволено українські літери, дефіс та апостроф.</p>
+		</section>
+
+		<section class="array-card result-card">
+			<p class="card-number">2 \ РЕЗУЛЬТАТ</p>
+			<h2>Зворотний <span>порядок</span></h2>
+
+			@if (isCalculated) {
+				<div class="result-list">
+					@for (surname of result; track $index; let i = $index) {
+						<div class="result-item">
+							<span class="result-number">{{ i + 1 }}.</span>
+							<span>{{ surname }}</span>
+						</div>
+					}
+				</div>
+			} @else {
+				<div class="empty-state">
+					<span class="empty-symbol">[ ]</span>
+					<p>Результат з'явиться після обробки масиву.</p>
+				</div>
+			}
+		</section>
+	</div>
+
+	@if (error) {
+		<p class="error-message">{{ error }}</p>
+	}
+
+	<div class="actions">
+		<button class="calculate-btn" type="button" (click)="calculate()">
+			ОБРОБИТИ МАСИВ
+		</button>
+		<button class="clear-btn" type="button" (click)="clear()">
+			ОЧИСТИТИ
+		</button>
+	</div>
+</main>

@@ -1,0 +1,91 @@
+/* нефіксован ширина таблиці з відступами, відступи для заголовку,  колонку часу - ширина у відсотках, а не пікселях*/
+#schedule {
+    margin-top: 24px;
+    padding-right: var(--padding-content);
+}
+
+#schedule h2 {
+    margin-bottom: 24px;
+}
+
+.schedule-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    min-width: 853px;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid var(--color-black);
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.schedule-table th {
+    padding: 18px 8px;
+
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+}
+
+.schedule-table td {
+    padding: 7px 10px;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.schedule-table tbody tr {
+    height: 120px;
+}
+
+.schedule-table th:first-child {
+    border-left: 1px solid var(--color-black);
+}
+
+.schedule-table th:last-child {
+    border-right: 1px solid var(--color-black);
+}
+
+.schedule-time {
+    width: 14%;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-size: var(--font-size-text);
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.schedule-table tbody td:not(.schedule-time):not(.schedule-special) {
+    background-color: var(--color-for-table);
+    color: var(--color-black);
+}
+
+.schedule-special {
+    background-color: var(--color-for-table);
+    color: var(--color-black);
+
+    text-align: center;
+    vertical-align: middle !important;
+    line-height: 20px;
+    padding: 13px;
+}
+
+.schedule-muted {
+    color: var(--color-dark-grey);
+}

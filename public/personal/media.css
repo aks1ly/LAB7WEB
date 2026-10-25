@@ -1,0 +1,551 @@
+html,
+body {
+    background-color: var(--color-light-light-grey);
+}
+
+
+.discipline-description {
+    padding: 8px 15px 15px;
+}
+
+
+.discipline-card.active .discipline-description {
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .header-title h1 {
+        font-size: 24px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .disciplines-grid {
+        column-gap: 8%;
+    }
+
+    .discipline-description {
+        height: 150px;
+    }
+
+    body {
+        font-size: 13px;
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+    }
+
+    #biography h2,
+    #disciplines h2,
+    #schedule h2,
+    #achievements h2,
+    .about > h2, 
+    .cat-gallery h2 {
+        font-size: 20px;
+    }
+
+    .about-item h3,
+    .about-item p {
+        font-size: 13px;
+    }
+
+    .biography-text {
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+    .header-title p {
+        font-size: 13px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .discipline-title,
+    .discipline-description {
+        font-size: 10px;
+    }
+
+    .schedule-table tbody tr {
+        height: 100px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 30px;
+        border-top: 2px solid var(--color-dark-grey);
+    }
+
+    .achievements-list li {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .schedule-scroll {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .schedule-table {
+        min-width: 853px;
+    }
+
+    #schedule {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        padding-right: 30px;
+    }
+
+    #contact h2 {
+        font-size: 20px;
+    }
+
+    .contact-form .form-group label,
+    .contact-form .form-group input,
+    .contact-form .form-group select,
+    .contact-form .form-group textarea,
+    .contact-form .form-group select option,
+    .contact-form .form-checkbox {
+        font-size: 12px;
+    }
+
+    #contact .contact-form button {
+        font-size: 12px;
+    }
+
+#timeline > h2 {
+    font-size: 20px;
+}
+
+#timeline .timeline-item {
+    padding-right: 15px;
+    margin-bottom: 25px;
+}
+
+#timeline .timeline-item:nth-child(even) {
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+#timeline .timeline-content {
+    padding: 10px;
+}
+
+#timeline .timeline-content .timeline-year {
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+#timeline .timeline-content h3 {
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+#timeline .timeline-content p {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+#statistics > h2 {
+    font-size: 20px;
+}
+
+#statistics .statistics-grid {
+    min-height: 110px;
+}
+
+#statistics .stat-item {
+    padding: 15px 8px;
+}
+
+#statistics .stat-number {
+    margin-bottom: 6px;
+    font-size: 28px;
+}
+
+#statistics .stat-item p {
+    font-size: 10px;
+}
+
+#statistics .study-progress {
+    padding: 15px;
+}
+
+#statistics .progress-info {
+    margin-bottom: 12px;
+}
+
+#statistics .progress-info h3 {
+    font-size: 10px;
+}
+
+#statistics .progress-info p,
+#statistics .progress-info > span {
+    font-size: 10px;
+}
+
+#statistics .study-progress progress {
+    height: 10px;
+}
+
+#projects > h2 {
+    font-size: 20px;
+}
+
+#projects .projects-grid {
+    gap: 12px;
+}
+
+#projects .project-card {
+    padding: 15px;
+}
+
+#projects .project-meta {
+    margin-bottom: 12px;
+    font-size: 9px;
+}
+
+#projects .project-card h3 {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+#projects .project-description {
+    margin-bottom: 12px;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+#projects .project-tags {
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+#projects .project-tags span {
+    padding: 4px 6px;
+    font-size: 8px;
+}
+
+#projects .project-link {
+    padding: 8px 10px;
+    font-size: 9px;
+}
+
+}
+
+@media (max-width: 767px) {
+
+    .main {
+        flex-direction: column;
+    }
+
+    .about {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--color-dark-grey);
+    }
+
+    .content {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .container {
+        padding-inline: 0;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+        white-space: nowrap;
+    }
+
+    .header-title {
+        width: 100%;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 2px solid var(--color-dark-grey);
+    }
+
+    #biography h2,
+    #disciplines h2,
+    #schedule h2,
+    #achievements h2,
+    .about > h2, 
+    .cat-gallery h2 {
+        font-size: 20px;
+    }
+
+    .about-item h3,
+    .about-item p {
+        font-size: 13px;
+    }
+
+    .biography-text {
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+    .discipline-title,
+    .discipline-description {
+        font-size: 12px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 20px 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .achievements-list li {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .schedule-table tbody tr {
+        height: 100px;
+    }
+
+    .disciplines-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-scroll {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .schedule-table {
+        min-width: 853px;
+    }
+
+    #schedule {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        padding-right: 30px;
+    }
+
+    #contact {
+        padding-right: var(--padding-content);
+    }
+
+    #contact h2 {
+        font-size: 20px;
+    }
+
+    /* Форма тільки в одну колонку */
+    #contact .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    /* Усі елементи займають одну колонку */
+    #contact .form-group,
+    #contact .form-group:has(textarea),
+    #contact .form-checkbox {
+        grid-column: 1;
+    }
+
+    #contact .contact-form .form-group label,
+    #contact .contact-form .form-group input,
+    #contact .contact-form .form-group select,
+    #contact .contact-form .form-group textarea,
+    #contact .contact-form .form-group select option,
+    #contact .contact-form .form-checkbox {
+        font-size: 12px;
+    }
+
+    /* Кнопка по центру */
+    #contact .contact-form button {
+        font-size: 12px;
+        justify-self: center;
+    }
+
+    #timeline {
+    margin-right: var(--padding-content);
+}
+
+#timeline > h2 {
+    font-size: 20px;
+}
+
+/* Лінія переноситься з центру вліво */
+#timeline .timeline::before {
+left: 6px;
+}
+
+/* Усі картки тепер справа від лінії */
+#timeline .timeline-item,
+#timeline .timeline-item:nth-child(even) {
+width: 100%;
+margin-left: 0;
+padding-left: 25px;
+padding-right: 0;
+margin-bottom: 20px;
+}
+
+/* Усі точки теж знаходяться зліва */
+#timeline .timeline-item::before,
+#timeline .timeline-item:nth-child(even)::before {
+left: 0;
+right: auto;
+}
+
+/* Менші картки для телефону */
+#timeline .timeline-content {
+    padding: 12px;
+}
+
+#timeline .timeline-content .timeline-year {
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+#timeline .timeline-content h3 {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+#timeline .timeline-content p {
+    font-size: 11px;
+    line-height: 16px;
+}
+
+#statistics {
+    margin-right: var(--padding-content);
+}
+
+#statistics > h2 {
+    font-size: 20px;
+}
+
+#statistics .statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 0;
+}
+
+/* перебиваємо desktop-границі */
+#statistics .stat-item {
+    padding: 18px 10px;
+    border-right: 2px solid var(--color-dark-grey);
+    border-bottom: 2px solid var(--color-dark-grey);
+}
+
+/* права колонка */
+#statistics .stat-item:nth-child(2n) {
+    border-right: none;
+}
+
+/* нижній ряд */
+#statistics .stat-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+}
+
+#statistics .stat-number {
+    margin-bottom: 6px;
+    font-size: 26px;
+}
+
+#statistics .stat-item p {
+    font-size: 10px;
+}
+
+#statistics .study-progress {
+    padding: 15px;
+}
+
+#statistics .progress-info {
+    margin-bottom: 12px;
+}
+
+#statistics .progress-info h3 {
+    font-size: 10px;
+}
+
+#statistics .progress-info p,
+#statistics .progress-info > span {
+    font-size: 10px;
+}
+
+#statistics .study-progress progress {
+    height: 10px;
+}
+
+#projects {
+    padding-right: var(--padding-content);
+}
+
+#projects > h2 {
+    font-size: 20px;
+}
+
+#projects .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+#projects .project-card {
+    padding: 15px;
+}
+
+#projects .project-meta {
+    margin-bottom: 12px;
+    font-size: 10px;
+}
+
+#projects .project-card h3 {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+#projects .project-description {
+    margin-bottom: 12px;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+#projects .project-tags {
+    margin-bottom: 15px;
+}
+
+#projects .project-tags span {
+    font-size: 9px;
+}
+
+#projects .project-link {
+    font-size: 10px;
+}
+
+}

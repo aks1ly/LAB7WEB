@@ -1,0 +1,86 @@
+#contact {
+    padding-right: var(--padding-content);
+    padding-bottom: var(--padding-content);
+}
+
+#contact h2 {
+    margin-bottom: 16px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-dark-grey);
+    background-color: var(--color-for-table);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    color: var(--color-black);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Повідомлення займає всю ширину форми */
+.form-group:has(textarea) {
+    grid-column: 1 / -1;
+}
+
+.form-checkbox {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+}
+
+.form-checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 12px 25px;
+    border: none;
+    background-color: var(--color-red);
+    color: var(--color-white);
+
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-menu);
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--color-dark-grey);
+}
+
+.form-checkbox input {
+    accent-color: var(--color-red);
+}

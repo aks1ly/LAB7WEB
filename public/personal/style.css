@@ -1,0 +1,48 @@
+@import url("reset.css");
+@import url("base.css");
+@import url("header.css");
+@import url("aside.css");
+@import url("footer.css");
+@import url("biography.css");
+@import url("disciplines.css");
+@import url("schedule.css");
+@import url("achivements.css");
+@import url("gallery.css");
+@import url("contact.css");
+@import url("timeline.css");
+@import url("statistics.css");
+@import url(projects.css);
+@import url("media.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    color: var(--color-black);
+}
+.container {
+    width: 100%; /* займає всю доступну ширину екрана */
+    margin: 0 auto;
+    background-color: var(--color-light-light-grey);
+}
+
+.main {
+    display: flex;
+}
+
+h2 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h2);
+    font-weight: 400;
+    color: var(--color-red);
+}
+
+.content {
+    flex: 1; /* займає весь вільний простір, який залишився в .main */
+    min-width: 0;
+    padding-left: var(--padding-content);
+    padding-top: var(--padding-content);
+}

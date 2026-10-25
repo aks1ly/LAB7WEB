@@ -1,0 +1,119 @@
+#statistics {
+    margin-top: var(--padding-content);
+    margin-right: var(--padding-content);
+}
+
+#statistics h2 {
+    margin-bottom: 20px;
+}
+
+/* Числові показники */
+.statistics-grid {
+    display: flex;
+    min-height: 150px;
+    border: 2px solid var(--color-dark-grey);
+}
+
+.stat-item {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 15px;
+    background-color: var(--color-for-table);
+    border-right: 2px solid var(--color-dark-grey);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+/* Головний показник */
+.stat-main {
+    flex: 1.25;
+    background-color: var(--color-red);
+}
+
+.stat-number {
+    margin-bottom: 10px;
+
+    font-family: var(--font-family-heading);
+    font-size: 36px;
+    color: var(--color-red);
+}
+
+.stat-main .stat-number {
+    font-size: 52px;
+    color: var(--color-white);
+}
+
+.stat-item p {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-small);
+    color: var(--color-dark-grey);
+}
+
+.stat-main p {
+    color: var(--color-white);
+}
+
+
+/* Прогрес навчання */
+.study-progress {
+    padding: 20px;
+    background-color: var(--color-dark-grey);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.progress-info h3 {
+    margin-bottom: 6px;
+
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    color: var(--color-white);
+}
+
+.progress-info p {
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    color: var(--color-light-light-grey);
+}
+
+.progress-info > span {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-small);
+    color: var(--color-white);
+}
+
+
+/* Progress */
+.study-progress progress {
+    display: block;
+    width: 100%;
+    height: 12px;
+
+    border: none;
+    background-color: var(--color-light-grey);
+}
+
+.study-progress progress::-webkit-progress-bar {
+    background-color: var(--color-light-grey);
+}
+
+.study-progress progress::-webkit-progress-value {
+    background-color: var(--color-red);
+}
+
+.study-progress progress::-moz-progress-bar {
+    background-color: var(--color-red);
+}

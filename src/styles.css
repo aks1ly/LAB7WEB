@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Unbounded', sans-serif;
+    background: #000000;
+    color: #000000;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
